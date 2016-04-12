@@ -20,9 +20,14 @@ Date Completed:<input type="date" ng-model="assignment.date_completed" />
 
 <div>
   <p ng-repeat="assignment in assignments">
-    Assignments:  {{assignment}}
+    Name:  {{assignment.student_name}} <br />
+    Assignment Number: {{assignment.assignment_number}}<br />
+    Student Score:  {{assignment.score}}<br />
+    Date Completed: {{assignment.date_completed}}
   </p>
 </div>
+
+
 
 
   </body>

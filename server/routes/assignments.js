@@ -38,4 +38,15 @@ router.post('/', function(request, response){
 
 });
 
+router.get('/:assignment_number', function(request, response, next){
+  console.log(request.params.assignment_number);
+
+  Assignments.findOne(request.params.assignment_number, function(err, assignment){
+    response.send(assignment);
+  });
+});
+
+
+
+
 module.exports = router;
