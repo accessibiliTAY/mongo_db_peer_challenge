@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Assign
+      ments</title>
+      <!-- all paths relative to public -->
+    <script src="vendor/angular.min.js"></script>
+    <script src="scripts/client.js"></script>
+  </head>
+  <body ng-controller="AssignmentController">
+<h1>Assignments</h1>
+
+Student Name:<input type="text" ng-model="assignment.student_name" />
+Student Assignment Number:<input type="number" ng-model="assignment.assignment_number" />
+Student Score:<input type="number" ng-model="assignment.score" />
+Date Completed:<input type="date" ng-model="assignment.date_completed" />
+
+<button ng-click="add(assignment)">Post Student Assignment</button>
+
+<div>
+  <p ng-repeat="assignment in assignments">
+    Assignments:  {{assignment}}
+  </p>
+</div>
+
+
+  </body>
+</html>
